@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>SHOPPING CART</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="index.css" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <main class="root">
+      <header>
+        <p>YOUR SHOPPING BAG</p>
+        <p class="total__items"></p>
+      </header>
+    </main>
+    <script>
+      const productsList = [
+        {
+          p_id: '1',
+          p_name: 'cotton tshirt',
+          p_variation: 'solid green',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'blue',
+            hexcode: '#1169BD',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_image: './img/T1.jpg',
+          p_quantity: 1,
+          p_originalprice: 11.0,
+          p_price: 11.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '2',
+          p_name: 'print girls tee',
+          p_variation: 'pink rainbow',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'pink',
+            hexcode: '#F1DDEF',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'pink',
+                hexcode: '#F1DDEF',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_image: './img/T2.jpg',
+          p_quantity: 1,
+          p_originalprice: 17.0,
+          p_price: 17.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '3',
+          p_name: 'flower pattern shirt',
+          p_variation: 'blue',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'blue',
+            hexcode: '#1169BD',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'blue',
+                hexcode: '#1169BD',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_image: './img/T3.jpg',
+          p_quantity: 1,
+          p_originalprice: 21.0,
+          p_price: 9.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '4',
+          p_name: 'check pattern tshirt',
+          p_variation: 'mens red',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'red',
+            hexcode: '',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_image: './img/T4.jpg',
+          p_quantity: 1,
+          p_originalprice: 22.0,
+          p_price: 22.0,
+          c_currency: '$',
+        },
+      ];
+      localStorage.setItem('cart', JSON.stringify(productsList));
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

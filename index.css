@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0px;
+}
+
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0px auto;
+  max-width: 650px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+h1,
+h2 {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: 'layfair_displayregular';
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+ul,
+li {
+  line-height: inherit;
+  text-indent: 20px;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  min-height: 20%;
+  font-size: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+header > .total__items {
+  font-size: 0.5rem;
+}
+
+a {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eae9e9;
+  word-wrap: break-word;
+}
+
+.img__container {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.img__container > img {
+  max-width: 100%;
+}
+
+.product__info {
+  display: inline;
+  font-size: 0.5rem;
+  padding-left: 4px;
+}
+
+.product__title,
+.product__style,
+.product__size,
+.product__color {
+  font-size: inherit;
+}
+
+.product__title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.product__style {
+  margin-top: 10px;
+}
+
+.product__size::before {
+  content: 'Size: ';
+}
+
+.product__quantity {
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+  width: 40px;
+  margin-top: 10px;
+}
+
+.product__quantity > input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.product__quantity::before {
+  margin-right: 10px;
+  content: 'QTY ';
+}
+
+.product__cp {
+  font-size: 0.6rem;
+  margin-top: 10px;
+}
+
+.product__cp::before {
+  content: '$';
+}
+
+.product__options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.product__options > .option__item {
+  font-size: 0.5rem;
+  margin-right: 5px;
+}
+
+.product__option--remove::before {
+  content: 'X';
+  margin-right: 4px;
+}
