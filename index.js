@@ -335,9 +335,15 @@ const cartSummary = function () {
   return createElement(
     'div',
     {
-      classList: 'cart-summary',
+      classList: 'cart__summary',
     },
-    [subTotalElement, estimatedShippingElement, promoCodeElement]
+    [
+      createElement('div', { classList: 'container' }, [
+        subTotalElement,
+        estimatedShippingElement,
+        promoCodeElement,
+      ]),
+    ]
   );
 };
 
@@ -349,19 +355,19 @@ const checkout = function () {
       classList: 'summary',
     },
     [
-      createElement('span', { classList: 'summary__label' }, [
-        createElement('span', {
-          classList: 'summary__label summary__label--large',
+      createElement('p', { classList: 'summary__label' }, [
+        createElement('p', {
+          classList: 'summary__label summary__label--md',
           text: 'ESTIMATED TOTAL',
         }),
-        // createElement('span', {
-        //   classList: 'summary__label summary__label--normal',
-        //   text: 'Tax will be applied during checkout.',
-        // }),
+        createElement('span', {
+          classList: 'summary__label summary__label--sm',
+          text: 'Tax will be applied during checkout.',
+        }),
       ]),
 
       createElement('span', {
-        classList: 'summary__value summary__value--large',
+        classList: 'summary__value summary__value--lg',
         text: `$${estimatedTotal}`,
       }),
     ]
@@ -369,40 +375,82 @@ const checkout = function () {
   return createElement(
     'div',
     {
-      classList: 'checkout box--sm',
+      classList: 'cart__summary cart__summary--extend',
     },
     [
-      estimatedTotalElement,
-      createElement('a', {
-        classList: 'checkout checkout__btn',
-        text: 'CHECKOUT',
-      }),
-      createElement('a', {
-        classList: 'checkout checkout__link',
-        text: 'CONTINUE SHOPPING',
-      }),
-      createElement('span', {
-        classList: 'checkout checkout__label',
-        text: 'Secure checkout. Shopping is always safe and secure.',
-      }),
-      createElement('div', { classList: 'checkout checkout__icon' }),
+      createElement('div', { classList: 'container' }, [
+        estimatedTotalElement,
+        createElement(
+          'div',
+          {
+            classList: 'checkout__btn',
+          },
+          [
+            createElement('a', {
+              href: '#',
+              classList: '',
+              text: 'CHECKOUT',
+            }),
+          ]
+        ),
+        createElement(
+          'div',
+          {
+            classList: 'checkout__link',
+          },
+          [
+            createElement('a', {
+              href: '#',
+              classList: '',
+              text: 'CONTINUE SHOPPING',
+            }),
+          ]
+        ),
+        createElement('p', {
+          classList: 'checkout__label',
+          text: 'Secure checkout. Shopping is always safe and secure.',
+        }),
+        createElement('div', { classList: 'checkout__icon' }, [
+          createElement('img', {
+            classList: 'secure__img',
+            src: './img/lock.jpg',
+          }),
+        ]),
+      ]),
     ]
   );
 };
 
 const cartInfo = function () {
-  return createElement('div', { classList: 'box--sm' }, [
-    createElement('p', { classList: 'cart__info' }, [
-      createElement(
-        'span',
-        { text: 'SIGN IN ', classList: 'cart__info link' },
-        [createElement('a', { href: '#' })]
-      ),
-      createElement('span', {
-        text: 'to save your cart and have access to your cart on mobile.',
-        classList: 'cart__info label',
-      }),
-    ]),
+  return createElement('div', { classList: 'cart__summary' }, [
+    // createElement('p', {}, [
+    //   createElement('a', {
+    //     classList: 'checkout__link',
+    //     text: 'SIGN IN',
+    //     href: '#',
+    //   }),
+    createElement(
+      'span',
+      {
+        classList: 'checkout__label',
+      },
+      [
+        createElement('span', {}, [
+          createElement('a', {
+            text: 'SIGN IN',
+            classList: 'checkout__link',
+            href: '#',
+          }),
+          createElement('span', {
+            text:
+              ' to save your cart and have access to your cart on mobile, tablet and desktop.',
+            classList: 'checkout__label',
+          }),
+        ]),
+      ]
+    ),
+
+    // ]),
   ]);
 };
 
