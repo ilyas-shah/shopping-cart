@@ -367,7 +367,7 @@ const checkout = function () {
       ]),
 
       createElement('span', {
-        classList: 'summary__value summary__value--lg',
+        classList: 'summary__value summary__value--lg--center',
         text: `$${estimatedTotal}`,
       }),
     ]
@@ -381,14 +381,14 @@ const checkout = function () {
       createElement('div', { classList: 'container' }, [
         estimatedTotalElement,
         createElement(
-          'div',
+          'a',
           {
-            classList: 'checkout__btn',
+            classList: '',
+            href: '#',
           },
           [
-            createElement('a', {
-              href: '#',
-              classList: '',
+            createElement('div', {
+              classList: 'checkout__btn',
               text: 'CHECKOUT',
             }),
           ]
@@ -423,12 +423,6 @@ const checkout = function () {
 
 const cartInfo = function () {
   return createElement('div', { classList: 'cart__summary' }, [
-    // createElement('p', {}, [
-    //   createElement('a', {
-    //     classList: 'checkout__link',
-    //     text: 'SIGN IN',
-    //     href: '#',
-    //   }),
     createElement(
       'span',
       {
