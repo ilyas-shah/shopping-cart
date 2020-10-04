@@ -59,13 +59,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .product {
   position: relative;
   display: flex;
   align-items: center;
-  height: 250px;
+  flex: 1 250px;
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid #eae9e9;
@@ -190,7 +191,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  height: 110px;
+  flex-basis: 110px;
   padding: 0 30px;
 }
 
@@ -291,6 +292,16 @@ a {
   height: 100%;
 }
 
+.summary__value--lg--center {
+  font-size: 1.2rem;
+}
+
+.checkout__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .checkout__btn {
   height: 50px;
   width: 100%;
@@ -318,4 +329,107 @@ a {
 
 .checkout__icon {
   text-align: center;
+}
+
+/* @media screen and (max-width: 480px) {
+  /* mobile */
+/* .root {
+    width: 100%;
+  }
+} */
+/* @media (min-width: 480px) and (max-width: 767px) {
+} */
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+    width: 50%;
+  }
+} */
+
+.flex__item {
+  display: flex;
+}
+
+.flex__item--col {
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 1281px) {
+  .root {
+    width: 40%;
+    padding: 0 10px;
+  }
+
+  .flex__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .flex__item--col {
+    display: flex;
+    width: 70%;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  .hidden {
+    display: block;
+    visibility: unset;
+  }
+
+  .summary {
+    justify-content: space-between;
+  }
+  .cart__summary {
+    padding: 0px;
+  }
+  .summary__value {
+    margin: 0px;
+  }
+
+  .promo__card {
+    flex-direction: row;
+    padding: 0px;
+    border-bottom: 10px solid #e4dbdb;
+  }
+
+  .promo__heading {
+    padding: 0px;
+  }
+
+  .promo__heading--md {
+    padding: 0px;
+    text-align: left;
+  }
+
+  .card__form {
+    justify-content: flex-end;
+  }
+
+  .checkout__actions {
+    flex-flow: row-reverse wrap;
+  }
+
+  .checkout__btn {
+    width: 30%;
+    margin: 0 0 0 20px;
+  }
+
+  .checkout__link {
+    margin: 0px;
+  }
+
+  .line {
+    border-bottom: 10px solid #e4dbdb;
+    margin-bottom: 20px;
+  }
 }
