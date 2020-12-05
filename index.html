@@ -14,6 +14,42 @@
     <meta name="theme-color" content="#fafafa" />
   </head>
   <body>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__body">
+          <div class="modal__product__details">
+            <div><span class="product__title">Some title</span></div>
+            <div><span class="product__price"><sup class="smaller">$</sup>20</span></div>
+            <ul class="product__colors">
+              <li class="product__color red"></li>
+              <li class="product__color yellow"></li>
+            </ul>
+            <div class="product__options">
+              <div class="product__option select">
+                <select class="">
+                  <option selected>SIZE</option>
+                  <option>s</option>
+                </select>
+              </div>
+              <div class="product__option select">
+                <select class="larger">
+                  <option selected>QTY</option>
+                  <option>1</option>
+                </select>
+              </div>
+            </div>
+            <div class="product__action">
+              <a href="#" class="link">EDIT</a>
+            </div>
+            <div><a href="link">See product details</a></div>
+          </div>
+          <div class="modal__product__image large">
+            <img class="product__image" src="./img/T2.jpg" alt="Image" />
+          </div>
+          <div class="close__btn">X</div>
+        </div>
+      </div>
+    </div>
     <main class="root">
       <header>
         <p>YOUR SHOPPING BAG</p>
@@ -74,16 +110,18 @@
                 </div>
                 <div class="product__options__container">
                   <ul class="product__options">
-                    <li class="">
+                    <li>
                       <a
-                        class=""
-                        href="file:///Users/ilyas-srijan/code/web-projects/cart/index.html/edit/1"
+                        class="edit"
+                        href=""
                         >EDIT</a
                       >
                     </li>
+                    <span>|</span>
                     <li class="">
                       <a class="" href="#">REMOVE</a>
                     </li>
+                    <span>|</span>
                     <li class="">
                       <a class="" href="#"
                         >SAVE FOR LATER</a
@@ -103,7 +141,7 @@
               <div class="flex">
                 <div class="product__info__1">
                   <div class="flex">
-                    <span style="font-weight: bold;">COTTON TSHIRT SOLID GREEN</span>
+                    <span style="font-weight: bold;">COTTON TSHIRT PINK PRINTED</span>
                   </div>
                   <div class="color__secondary">
                     <span class="">Style #:</span>
@@ -134,14 +172,16 @@
                 <ul class="product__options">
                   <li class="">
                     <a
-                      class=""
+                      class="edit"
                       href="file:///Users/ilyas-srijan/code/web-projects/cart/index.html/edit/1"
                       >EDIT</a
                     >
                   </li>
+                  <span>|</span>
                   <li class="">
                     <a class="" href="#">REMOVE</a>
                   </li>
+                  <span>|</span>
                   <li class="">
                     <a class="" href="#"
                       >SAVE FOR LATER</a
@@ -161,7 +201,7 @@
             <div class="flex">
               <div class="product__info__1">
                 <div class="flex">
-                  <span style="font-weight: bold;">COTTON TSHIRT SOLID GREEN</span>
+                  <span style="font-weight: bold;">COTTON TSHRIT BLUE GRAPHIC</span>
                 </div>
                 <div class="color__secondary">
                   <span class="">Style #:</span>
@@ -192,14 +232,16 @@
               <ul class="product__options">
                 <li class="">
                   <a
-                    class=""
+                    class="edit"
                     href="file:///Users/ilyas-srijan/code/web-projects/cart/index.html/edit/1"
                     >EDIT</a
                   >
                 </li>
+                <span>|</span>
                 <li class="">
                   <a class="" href="#">REMOVE</a>
                 </li>
+                <span>|</span>
                 <li class="">
                   <a class="" href="#"
                     >SAVE FOR LATER</a
@@ -219,7 +261,7 @@
             <div class="flex">
               <div class="product__info__1">
                 <div class="flex">
-                  <span style="font-weight: bold;">COTTON TSHIRT SOLID GREEN</span>
+                  <span style="font-weight: bold;">COTTON TSHIRT CHECKERED RED</span>
                 </div>
                 <div class="color__secondary">
                   <span class="">Style #:</span>
@@ -250,14 +292,15 @@
               <ul class="product__options">
                 <li class="">
                   <a
-                    class=""
-                    href="file:///Users/ilyas-srijan/code/web-projects/cart/index.html/edit/1"
+                    class="edit"
                     >EDIT</a
                   >
                 </li>
+                <span>|</span>
                 <li class="">
                   <a class="" href="#">REMOVE</a>
                 </li>
+                <span>|</span>
                 <li class="">
                   <a class="" href="#"
                     >SAVE FOR LATER</a
@@ -268,97 +311,328 @@
           </div>
         </div>
     </div>
-        <div class="flex__container">
-          <div class="flex__item hidden help">
-            <b>Need help or have questions</b>
-            <p>call customer service 111-222-333</p>
-            <p class="link"><a href="#">Chat with one of the stylists</a></p>
-            <p class="link"><a href="#">See return and exchange policy</a></p>
+      <div class="flex__container">
+        <div class="flex__item hidden help">
+          <b>Need help or have questions</b>
+          <p>call customer service 111-222-333</p>
+          <p class="link"><a href="#">Chat with one of the stylists</a></p>
+          <p class="link"><a href="#">See return and exchange policy</a></p>
+        </div>
+        <div class="flex__item flex__item--col">
+          <div class="promo__card">
+            <div class="promo__heading">
+              <p class="promo__heading--md">
+                ENTER PROMOTION CODE OF GIFT CARD
+              </p>
+            </div>
+            <form class="card__form">
+              <input class="promo__code__input" type="text" required="" placeholder="promo code" /><input
+                class="promo__submit"
+                type="submit"
+                value="APPLY"
+              />
+            </form>
           </div>
-          <div class="flex__item flex__item--col">
-            <div class="promo__card">
-              <div class="promo__heading">
-                <p class="promo__heading--md">
-                  ENTER PROMOTION CODE OF GIFT CARD
+          <div class="cart__summary">
+            <div class="container">
+              <div class="summary">
+                <p class="summary__label summary__label--md">SUBTOTAL</p>
+                <span class="summary__value">$59.00</span>
+              </div>
+              <div class="summary">
+                <div class="flex__item flex__item--col">
+                  <p class="summary__label summary__label--md flex-item">
+                    ESTIMATED SHIPPING*
+                  </p>
+                  <span class="summary__label summary__label--sm flex-item"
+                    >You qualify for free shipping because your order is over
+                    50*</span
+                  >
+                </div>
+                <span class="summary__value summary__value--md">FREE</span>
+              </div>
+              <div class="summary">
+                <p class="summary__label summary__label-md">
+                  PROMOTION CODE JF10 APPLIED
                 </p>
+                <span class="summary__value">-$5.90</span>
               </div>
-              <form class="card__form">
-                <input class="promo__code__input" type="text" required="" /><input
-                  class="promo__submit"
-                  type="submit"
-                  value="APPLY"
-                />
-              </form>
             </div>
-            <div class="cart__summary">
-              <div class="container">
-                <div class="summary">
-                  <p class="summary__label summary__label--md">SUBTOTAL</p>
-                  <span class="summary__value">$59.00</span>
-                </div>
-                <div class="summary">
-                  <div class="flex__item flex__item--col">
-                    <p class="summary__label summary__label--md flex-item">
-                      ESTIMATED SHIPPING*
-                    </p>
-                    <span class="summary__label summary__label--sm flex-item"
-                      >You qualify for free shipping because your order is over
-                      50*</span
-                    >
-                  </div>
-                  <span class="summary__value summary__value--md">FREE</span>
-                </div>
-                <div class="summary">
-                  <p class="summary__label summary__label-md">
-                    PROMOTION CODE JF10 APPLIED
+          </div>
+          <div class="cart__summary cart__summary--extend">
+            <div class="container">
+              <div class="summary">
+                <div class="flex__item flex__item--col">
+                  <p class="summary__label summary__label--md">
+                    ESTIMATED TOTAL
                   </p>
-                  <span class="summary__value">-$5.90</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart__summary cart__summary--extend">
-              <div class="container">
-                <div class="summary">
-                  <div class="flex__item flex__item--col">
-                    <p class="summary__label summary__label--md">
-                      ESTIMATED TOTAL
-                    </p>
-                    <span class="summary__label summary__label--sm"
-                      >Tax will be applied during checkout.</span
-                    >
-                  </div>
-                  <span class="summary__value summary__value--lg--center"
-                    >$53.10</span
+                  <span class="summary__label summary__label--sm"
+                    >Tax will be applied during checkout.</span
                   >
                 </div>
-                <div class="line hidden"></div>
-                <div class="checkout__actions">
-                  <a class="checkout__btn" href="#">CHECKOUT </a>
-                  <div class="checkout__link">
-                    <a class="" href="#">CONTINUE SHOPPING</a>
-                  </div>
-                  <p class="checkout__label">
-                    Secure checkout. Shopping is always safe and secure.
-                  </p>
-                  <div class="checkout__icon">
-                    <img class="secure__img" src="./img/lock.jpg" alt="Image" />
-                  </div>
+                <span class="summary__value summary__value--lg--center"
+                  >$53.10</span
+                >
+              </div>
+              <div class="line hidden"></div>
+              <div class="checkout__actions">
+                <a class="checkout__btn" href="#">CHECKOUT </a>
+                <div class="checkout__link">
+                  <a class="" href="#">CONTINUE SHOPPING</a>
+                </div>
+                <p class="checkout__label">
+                  Secure checkout. Shopping is always safe and secure.
+                </p>
+                <div class="checkout__icon">
+                  <img class="secure__img" src="./img/lock.jpg" alt="Image" />
                 </div>
               </div>
             </div>
-            <div class="cart__summary">
-              <span class="checkout__label">
-                <span class="">
-                  <a class="checkout__link" href="#">SIGN IN</a>
-                  <span class="checkout__label">
-                    to save your cart and have access to your cart on mobile,
-                    tablet and desktop.</span
-                  >
-                </span>
+          </div>
+          <div class="cart__summary">
+            <span class="checkout__label">
+              <span class="">
+                <a class="checkout__link" href="#">SIGN IN</a>
+                <span class="checkout__label">
+                  to save your cart and have access to your cart on mobile,
+                  tablet and desktop.</span
+                >
               </span>
-            </div>
+            </span>
           </div>
         </div>
+      </div>
     </main>
+    <script type="text/javascript">
+      const producs = [
+        {
+          p_id: '1',
+          p_name: 'cotton tshirt',
+          p_variation: 'solid green',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'blue',
+            hexcode: '#1169BD',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_quantity: 1,
+          p_originalprice: 11.0,
+          p_price: 11.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '2',
+          p_name: 'print girls tee',
+          p_variation: 'pink rainbow',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'pink',
+            hexcode: '#F1DDEF',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'pink',
+                hexcode: '#F1DDEF',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_quantity: 1,
+          p_originalprice: 17.0,
+          p_price: 17.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '3',
+          p_name: 'flower pattern shirt',
+          p_variation: 'blue',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'blue',
+            hexcode: '#1169BD',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'blue',
+                hexcode: '#1169BD',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_quantity: 1,
+          p_originalprice: 21.0,
+          p_price: 9.0,
+          c_currency: '$',
+        },
+        {
+          p_id: '4',
+          p_name: 'check pattern tshirt',
+          p_variation: 'mens red',
+          p_style: 'ms13kt1906',
+          p_selected_color: {
+            name: 'red',
+            hexcode: '',
+          },
+          p_selected_size: {
+            name: 'small',
+            code: 's',
+          },
+          p_available_options: {
+            colors: [
+              {
+                name: 'green',
+                hexcode: '#A3D2A1',
+              },
+              {
+                name: 'yellow',
+                hexcode: '#F9F8E6',
+              },
+              {
+                name: 'red',
+                hexcode: '#ED99A8',
+              },
+            ],
+            sizes: [
+              {
+                name: 'small',
+                code: 's',
+              },
+              {
+                name: 'medium',
+                code: 'm',
+              },
+              {
+                name: 'large',
+                code: 'l',
+              },
+              {
+                name: 'extra large',
+                code: 'xl',
+              },
+            ],
+          },
+          p_quantity: 1,
+          p_originalprice: 22.0,
+          p_price: 22.0,
+          c_currency: '$',
+        },
+      ];
+      // When the user clicks the button, open the modal 
+     
+      const modal = document.querySelector('.modal');
+      const editBtn = document.querySelector('.edit');
+      const showModal = (e) => {
+        const body = document.getElementsByTagName('body');
+        modal.style.display = "block";
+        body.style.overflow = 'hidden';
+        
+      };
+      console.log(modal);
+      console.log(editBtn);
+      editBtn.addEventListener('click', showModal);
+
+      
+      // const closeModal = () =>  modal.style.display = "none";
+
+      // editBtn.addEventListener('click', showModal);
+      
+    </script>
   </body>
 </html>

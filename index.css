@@ -12,20 +12,23 @@ body {
   line-height: 1.4;
   letter-spacing: 1px;
   word-spacing: 1px;
+  scroll-behavior: smooth;
+  overflow: auto;
 }
 
 ul,
 li {
   line-height: inherit;
   text-indent: 20px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 span {
   color: rgb(24, 24, 24);
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .root {
@@ -44,12 +47,18 @@ header {
   min-height: 20%;
   font-size: 0.5rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
+}
+
+header > p {
+  font-size: 2em;
+  flex-basis: 75%;
 }
 
 header > .total__items {
   font-size: 0.6rem;
+  flex-basis: 20%;
 }
 
 a {
@@ -116,7 +125,7 @@ a {
 
 .img__container {
   width: 200px;
-  height: 100%;
+  height: 200px;
   margin-right: 10px;
 }
 
@@ -139,7 +148,6 @@ a {
   align-items: flex-start;
   justify-content: space-between;
 }
-
 
 .product__info {
   display: flex;
@@ -251,7 +259,7 @@ a {
   text-align: center;
   font-size: 0.7rem;
   color: #a99f9f;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .promo__submit {
@@ -260,6 +268,12 @@ a {
   background: white;
   font-size: 0.6rem;
   width: 70px;
+}
+
+.promo__submit:hover,
+:active {
+  background: #e4dcdc;
+  cursor: pointer;
 }
 
 .cart__summary {
@@ -343,6 +357,11 @@ a {
   text-align: center;
 }
 
+.checkout__btn:hover,
+:active {
+  background: #547ece;
+}
+
 .checkout__label {
   font-size: 0.5rem;
   text-align: center;
@@ -390,13 +409,84 @@ a {
   display: none;
 }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(5, 5, 5); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+.modal__content {
+  position: relative;
+  background: white;
+  color: black;
+  width: 40%;
+  height: 400px;
+  margin: 15% auto;
+  padding: 30px;
+}
+
+.close__btn {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  border: 1px solid white;
+  box-shadow: -6px 1em 3em 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px 25px 25px 25px;
+  width: 40px;
+  text-align: center;
+  background: white;
+  padding: 8px;
+}
+
+.modal__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.modal__product__details {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.modal__product__image {
+  flex-basis: 40%;
+  height: 100%;
+}
+
+.modal__product__image > img {
+  object-fit: contain;
+  max-width: 100%;
+}
 
 @media (min-width: 1281px) {
   .root {
     width: 50%;
     padding: 0 10px;
   }
-  
+
+  header > p {
+    font-size: 4em;
+    flex-basis: 100%;
+  }
+
+  header > .total__items {
+    font-size: 0.6rem;
+  }
+
   .flex__container {
     display: flex;
     align-items: center;
@@ -421,7 +511,6 @@ a {
     width: 100%;
     border-top: 1px solid #cecece;
     padding: 15px;
-    
   }
 
   .total__items {
@@ -445,10 +534,11 @@ a {
   }
 
   .img__container {
+    height: 170px;
     flex-basis: 20%;
     margin-right: 10px;
   }
- 
+
   .product__info__container {
     flex-basis: 80%;
     display: unset;
@@ -456,7 +546,6 @@ a {
 
   .product__info {
     display: flex;
-    
   }
 
   .product__info__1 {
@@ -495,11 +584,12 @@ a {
   }
 
   a {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 
-  ul, li {
-    margin:0;
+  ul,
+  li {
+    margin: 0;
     padding: 0;
     text-indent: 0;
     list-style-type: 0;
@@ -544,6 +634,12 @@ a {
     text-align: left;
   }
 
+  .promo__submit:hover,
+  :active {
+    background: #e4dcdc;
+    cursor: pointer;
+  }
+
   .card__form {
     justify-content: flex-end;
   }
@@ -555,6 +651,11 @@ a {
   .checkout__btn {
     width: 30%;
     margin: 0 0 0 20px;
+  }
+
+  .checkout__btn:hover,
+  :active {
+    background: #547ece;
   }
 
   .checkout__link {
