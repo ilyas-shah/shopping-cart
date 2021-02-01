@@ -1,24 +1,13 @@
 $background-color: rgb(5, 5, 5);
 $background-color-fallback: rgba(0, 0, 0, 0.6);
-.btn__primary {
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  padding: 14px;
-  border: 1px solid;
-  background: #496dc4;
-  color: #fff;
-  font-size: 0.6rem;
-  text-align: center;
-}
 
 .modal {
   display: none; /* Hidden by default */
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  // padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   max-width: 100%;
@@ -39,84 +28,117 @@ $background-color-fallback: rgba(0, 0, 0, 0.6);
     color: black;
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding: 100px;
     z-index: 2000;
-
+    place-content: center;
+    max-width: 800px;
+    max-height: 600px;
+    overflow: scroll;
     .modal__body {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
       width: 100%;
       height: 100%;
-
-      .modal__product__details {
-        flex-basis: 55%;
+      .c-product {
+        flex: 1;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        border-top: 10px solid #eeeeee;
         justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        .modal__product__item {
-          flex-basis: 15%;
+        .c-product__item {
           width: 100%;
           text-align: center;
-        }
-        .modal__product__options {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
-          .product__option {
-            flex-basis: 49%;
-            height: 46px;
+          margin-bottom: 20px;
+          &.c-product-options {
+            display: flex;
+            justify-content: space-between;
+          }
+          cursor: pointer;
+          .c-product__select {
+            display: flex;
+            height: 40px;
+            justify-content: space-between;
+            flex-basis: 48%;
             select {
-              width: 100%;
-              display: block;
-              padding: 0 30px;
               height: 100%;
-              text-align: center;
             }
           }
+          span {
+            font-size: 1rem;
+          }
+          select {
+            width: 100%;
+            border: 1px solid #eeeeee;
+            &:focus,
+            &:active {
+              border: 1px solid #eeeeee;
+            }
+            option {
+              border: inherit;
+            }
+          }
+          a {
+            text-decoration: underline;
+          }
+
+          #edit-save {
+            text-decoration: none;
+          }
+
+          .c-product-price {
+            font-size: 2rem;
+            font-weight: bold;
+          }
         }
-        .product-title {
-          font-weight: bold;
-          font-size: 1.5rem;
-        }
-        .product-price {
-          font-weight: bold;
-          font-size: larger;
+        &:hover {
+          opacity: unset;
         }
       }
-
-      .modal__product__image {
-        flex-grow: 1;
-        flex-basis: 30%;
-        height: 100%;
-        text-align: center;
+      .c-product__image {
+        flex: 1;
+        display: flex;
+        place-content: center;
         img {
-          object-fit: contain;
           max-width: 100%;
+          object-fit: contain;
         }
       }
     }
   }
-  @media (min-width: 1000px) {
-    padding: 150px 350px;
-    .modal__content {
+  .c-btn-cancel {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 1px solid white;
+    border-radius: 25px 25px 25px 25px;
+    width: 40px;
+    text-align: center;
+    background: white;
+    padding: 8px;
+    &:hover {
+      box-shadow: -6px 1em 3em 0px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .modal__content {
+    flex-direction: row;
+    .modal__body {
       flex-direction: row;
-      .modal__body {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 80px 60px;
-        .modal__product__details {
-          flex-basis: 50%;
-          justify-content: flex-end;
-        }
-        .modal__product__image {
-          display: flex;
-          flex-basis: 50%;
-          align-items: center;
-          justify-content: center;
-        }
+      justify-content: space-between;
+      padding: 80px 60px;
+      .modal__product__details {
+        flex-basis: 50%;
+        justify-content: flex-end;
+      }
+      .modal__product__image {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
